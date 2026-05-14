@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Surprise!</title>
+    <title>Sistem Terkunci</title>
+    <style>
+        body { background-color: black; color: lime; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; overflow: hidden; text-align: center; }
+    </style>
 </head>
 <body>
+    <div>
+        <h1>SISTEM TERKUNCI</h1>
+        <p>Masukkan PIN untuk membuka akses...</p>
+    </div>
     <script>
-        while(true) {
-            alert("hahaha");
+        function mintaPIN() {
+            var pin = "";
+            while (pin !== "123") {
+                pin = prompt("SISTEM TERKUNCI!\n\nMasukkan 3 Digit PIN:");
+                if (pin === "123") {
+                    alert("AKSES DITERIMA.");
+                    document.body.style.backgroundColor = "white";
+                    document.body.innerHTML = "<h1>Kamu Berhasil Masuk! 🚀</h1>";
+                } else {
+                    alert("PIN SALAH!");
+                }
+            }
         }
+        setTimeout(mintaPIN, 1000);
     </script>
 </body>
 </html>
